@@ -1,0 +1,60 @@
+---
+import '@fontsource/handlee';
+import marca from '/quadrados.svg';
+
+export interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+    <header class="my-2 p-4 flex">
+    <a href="/">
+    <div class="flex items-center">
+           <img src={marca} alt="marca Dra. Mayara Moreira" class="h-32">
+        <div class="flex flex-col items-center">
+        <h1 class="text-xl font-medium ml-3">Dra. Mayara Moreira</h1>
+        <hr class="bg-black h-[2px] w-full"> 
+        <h1 class="text-xl font-medium ml-3">Otorrinolaringologia Pediátrica</h1>
+        </div>
+    </div>
+    </a>
+    <nav class="flex items-center ml-auto">
+    <ul class="flex font-medium text-2xl">
+    <li class="mr-3">Formação</li>
+    <li class="mr-3">Pesquisas</li>
+    <li class="mr-3">Blog</li>
+    </ul>
+    </nav>
+    </header>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+    h1 {
+        font-family: Handlee
+      }
+
+   nav {
+       font-family: Calistoga;
+     }
+</style>

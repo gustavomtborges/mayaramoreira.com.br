@@ -1,0 +1,25 @@
+{
+  "name": "mayaramoreira-com-br",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^3.1.1",
+    "@fontsource/calistoga": "^4.5.11",
+    "@fontsource/handlee": "^4.5.9",
+    "astro": "^2.3.0",
+    "tailwindcss": "^3.3.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "prettier-plugin-astro": "^0.8.0",
+    "prettier-plugin-tailwind": "^2.2.12",
+    "prettier-plugin-tailwindcss": "^0.2.7"
+  }
+}
